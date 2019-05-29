@@ -1,5 +1,6 @@
 html {
    box-sizing: border-box;
+   font-size: 62.5%;
 }
 *,
 *::before,
@@ -11,5 +12,15 @@ html {
 
 body {
    font-family: 'Roboto', sans-serif;
-   font-size: 62.5%;
+   background: $color-grey;
+}
+
+.big-container {
+   display: flex;
+   width: 120rem;
+   margin: 5rem auto;
+   background: $white;
+   border-radius: 0.4rem;
+   box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+   overflow: hidden;
 }
