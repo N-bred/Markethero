@@ -148,3 +148,21 @@ body {
     font-size: 1.4rem; }
   .header__links:hover {
     color: #471e7f; }
+
+.feed {
+  border-bottom: 1px solid #eee; }
+  .feed .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem; }
+  .feed__item {
+    max-width: 23rem; }
+  .feed__title {
+    font-size: 1.8rem;
+    font-weight: normal; }
+    .feed__title span {
+      color: #ccc;
+      font-size: 1.3rem; }
+  .feed__text {
+    font-size: 1.3rem; }
