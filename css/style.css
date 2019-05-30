@@ -22,8 +22,18 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
   overflow: hidden; }
 
+.col-1 {
+  flex: 1 0 20%;
+  transition: margin 0.3s ease-in-out;
+  transform-origin: right; }
+
+.col-2 {
+  flex: 1 0 80%; }
+
+.sidebar--toggle {
+  margin-left: -40%; }
+
 .sidebar {
-  flex: 1 0 10%;
   position: relative;
   height: 100%; }
   .sidebar__logo {
@@ -43,11 +53,13 @@ body {
       position: absolute;
       right: 0;
       background: #eee;
-      height: 1rem;
-      min-width: 0.6rem;
-      clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%); }
+      height: 1.2rem;
+      min-width: 0.8rem;
+      clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
+      border: none;
+      transform: translateX(7%); }
   .sidebar__menu {
-    background: #59259f;
+    background: linear-gradient(to top right, #5d2787, #59259f);
     height: 100%;
     padding: 2rem; }
   .sidebar__client {
@@ -87,3 +99,52 @@ body {
       color: #fff; }
   .sidebar .active {
     color: #fff; }
+
+.header {
+  background: #eee;
+  padding: 1.3rem; }
+  .header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .header__menu-button {
+    display: inline-block;
+    margin-left: 2rem;
+    cursor: pointer;
+    height: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header__menu-button--bars {
+      height: 0.2rem;
+      width: 1.5rem;
+      background: #000;
+      display: block;
+      position: relative;
+      transform: rotate(180deg); }
+      .header__menu-button--bars::before, .header__menu-button--bars::after {
+        content: '';
+        display: block;
+        height: 0.2rem;
+        width: 2rem;
+        position: absolute;
+        background: #000; }
+      .header__menu-button--bars::before {
+        transform: translateY(-0.5rem); }
+      .header__menu-button--bars::after {
+        transform: translateY(0.5rem); }
+  .header__options {
+    margin-left: auto;
+    flex: 1 0 80%; }
+  .header__list {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; }
+  .header__links:link, .header__links:visited {
+    display: inline-block;
+    margin: 0.5rem 1.5rem;
+    text-decoration: none;
+    color: #5d2787;
+    font-size: 1.4rem; }
+  .header__links:hover {
+    color: #471e7f; }

@@ -1,26 +1,36 @@
 html {
-   box-sizing: border-box;
-   font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 *,
 *::before,
 *::after {
-   margin: 0;
-   padding: 0;
-   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
-   background: $color-grey;
+  font-family: 'Roboto', sans-serif;
+  background: $color-grey;
 }
 
 .big-container {
-   display: flex;
-   width: 120rem;
-   margin: 5rem auto;
-   background: $white;
-   border-radius: 0.4rem;
-   box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
-   overflow: hidden;
+  display: flex;
+  width: 120rem;
+  margin: 5rem auto;
+  background: $white;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+  overflow: hidden;
+}
+
+.col-1 {
+  flex: 1 0 20%;
+  transition: margin 0.3s ease-in-out;
+  transform-origin: right;
+}
+
+.col-2 {
+  flex: 1 0 80%;
 }

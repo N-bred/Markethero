@@ -1,0 +1,72 @@
+.header {
+  background: $color-grey;
+  padding: 1.3rem;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__menu-button {
+    display: inline-block;
+    margin-left: 2rem;
+    cursor: pointer;
+    height: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--bars {
+      height: 0.2rem;
+      width: 1.5rem;
+      background: #000;
+      display: block;
+      position: relative;
+      transform: rotate(180deg);
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        height: 0.2rem;
+        width: 2rem;
+        position: absolute;
+        background: #000;
+      }
+
+      &::before {
+        transform: translateY(-0.5rem);
+      }
+
+      &::after {
+        transform: translateY(0.5rem);
+      }
+    }
+  }
+
+  &__options {
+    margin-left: auto;
+    flex: 1 0 80%;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+  }
+
+  &__links {
+    &:link,
+    &:visited {
+      display: inline-block;
+      margin: 0.5rem 1.5rem;
+      text-decoration: none;
+      color: $primary-color-light;
+      font-size: 1.4rem;
+    }
+    &:hover {
+      color: $primary-color-dark;
+    }
+  }
+}
