@@ -3,6 +3,11 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="shortcut icon"
+         href="./img/mh-logo-icon.png"
+         type="image/x-icon"
+      />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <link
          href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -16,6 +21,7 @@
          <div class="col-1">
             <section class="sidebar">
                <div class="sidebar__logo">
+                  <img src="./img/mh-logo-icon.png" alt="MarketHero logo" />
                   <h1>Market Hero</h1>
                   <span class="triangle"></span>
                </div>
@@ -109,10 +115,11 @@
 
             <main class="main">
                <div class="main__col main__col--1">
+                  <!-- Emails -->
                   <div class="main__emails">
                      <div class="emails__title">
                         <h3>Last Emails</h3>
-                        <select class="emails_select">
+                        <select class="emails__select">
                            <option value="#">Email title</option>
                            <option value="One">Email title One</option>
                            <option value="Two">Email title Two</option>
@@ -175,10 +182,12 @@
                         </div>
                      </section>
                   </div>
+
+                  <!-- Sales -->
                   <div class="main__sales">
                      <div class="sales__title">
                         <h3>Sales</h3>
-                        <select class="sales_select">
+                        <select class="sales__select">
                            <option value="#">Last week</option>
                            <option value="One">Last week One</option>
                            <option value="Two">Last week Two</option>
@@ -186,7 +195,10 @@
                         </select>
                      </div>
                      <div class="sales__graph">
-                        <canvas id="sales_canvas"></canvas>
+                        <canvas
+                           class="sales__canvas"
+                           id="sales_canvas"
+                        ></canvas>
                      </div>
                   </div>
                </div>
@@ -196,8 +208,10 @@
                         <h2 class="day__title">
                            Yesterday
                         </h2>
-                        <a href="#">&#x027E8;</a>
-                        <a href="#">&#x027E8;</a>
+                        <div class="day__links">
+                           <a class="left" href="#">&#x027E8;</a>
+                           <a class="right" href="#">&#x027E8;</a>
+                        </div>
                      </div>
                      <div class="day__sales">
                         <div class="sales__border sales__border--green">
@@ -238,22 +252,23 @@
             </main>
 
             <section class="adds">
-               <div class="adds__space"></div>
-               <div class="adds__title">
-                  <h3 class="adds__text">
-                     <span class="adds__text--yellow">
-                        8 Traffic Sources
-                     </span>
-                     That Generated
-                     <span class="adds__text--white">
-                        182,561
-                     </span>
-                     Email Opt Inst
-                  </h3>
-                  <p class="add__offer">5 are free</p>
-               </div>
-               <div class="adds__button">
-                  <a href="#" class="adds__link">read more</a>
+               <div class="adds__space">
+                  <div class="adds__title">
+                     <h3 class="adds__text">
+                        <span class="adds__text--yellow">
+                           8 Traffic Sources
+                        </span>
+                        That Generated
+                        <span class="adds__text--white">
+                           182,561
+                        </span>
+                        Email Opt Inst
+                     </h3>
+                     <p class="adds__offer">5 are free</p>
+                  </div>
+                  <div class="adds__button">
+                     <a href="#" class="adds__link">read more</a>
+                  </div>
                </div>
             </section>
 
@@ -266,6 +281,7 @@
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+      <script src="./js/chart.js"></script>
       <script src="./js/app.js"></script>
    </body>
 </html>

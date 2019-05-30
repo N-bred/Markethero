@@ -1,10 +1,20 @@
-const header = document.querySelector('.header'),
-  sidebar = document.querySelector('.sidebar__logo'),
-  col_1 = document.querySelector('.col-1'),
-  button = document.querySelector('.header__menu-button');
+(function() {
+   // Var declaration
+   const header = document.querySelector('.header'),
+      sidebar = document.querySelector('.sidebar__logo'),
+      col_1 = document.querySelector('.col-1'),
+      button = document.querySelector('.header__menu-button'),
+      yearSpan = document.querySelector('#footer_year'),
+      date = new Date();
 
-header.style.height = String(sidebar.offsetHeight) + 'px';
-button.addEventListener('click', () => {
-  col_1.classList.toggle('sidebar--toggle');
-});
-// 40% y luego a 0
+   // Height fix to nav
+   header.style.height = String(sidebar.offsetHeight) + 'px';
+
+   // Button for sidebar slide
+   button.addEventListener('click', () => {
+      col_1.classList.toggle('sidebar--toggle');
+   });
+
+   // Footer year
+   yearSpan.innerText = date.getFullYear();
+})();

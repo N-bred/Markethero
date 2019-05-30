@@ -1,0 +1,63 @@
+.adds {
+   padding: 2.5rem;
+   border-bottom: 1px solid $color-grey;
+
+   &__space {
+      background: linear-gradient(
+         to right top,
+         $primary-color-light,
+         $primary-color-dark
+      );
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2.5rem;
+      border-radius: 4px;
+   }
+
+   &__text {
+      color: $color-grey-3;
+      font-size: 1.8rem;
+      font-weight: lighter;
+      letter-spacing: 0.1rem;
+
+      &--yellow {
+         color: $color-yellow;
+         font-weight: bold;
+      }
+
+      &--white {
+         color: $white;
+         font-weight: bold;
+      }
+   }
+
+   &__offer {
+      text-transform: uppercase;
+      color: $white;
+      font-size: 1.3rem;
+      font-weight: bold;
+   }
+
+   &__button {
+      justify-self: flex-end;
+   }
+
+   &__link {
+      &:link,
+      &:visited {
+         color: $primary-color;
+         padding: 1.5rem 2.5rem;
+         background: $color-yellow;
+         border-radius: 4px;
+         text-decoration: none;
+         text-transform: uppercase;
+         font-size: 1.4rem;
+         transition: background 0.3s;
+      }
+
+      &:hover {
+         background: rgba($color-yellow, 0.9);
+      }
+   }
+}

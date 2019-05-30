@@ -1,0 +1,29 @@
+@mixin bars($color, $height) {
+   content: '';
+   display: block;
+   background: $color;
+   position: absolute;
+   border-radius: 5px;
+   width: 100%;
+   bottom: 0;
+   height: $height;
+}
+
+@mixin title {
+   &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem;
+      h3 {
+         font-size: 1.8rem;
+         font-weight: normal;
+      }
+   }
+
+   &__select {
+      border: 1px solid $color-grey;
+      padding: 0.5rem 0.75rem;
+      border-radius: 3px;
+   }
+}

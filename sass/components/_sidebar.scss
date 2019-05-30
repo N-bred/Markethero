@@ -1,101 +1,105 @@
 .sidebar {
-  position: relative;
-  height: 100%;
+   position: relative;
+   height: 100%;
 
-  &__logo {
-    background: darken($primary-color-dark, 1);
-    color: $white;
-    padding: 1.5rem 4rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      text-transform: uppercase;
-      text-align: center;
-      flex: 1 0 100%;
-      font-size: 1.8rem;
-      letter-spacing: 0.2rem;
-    }
-
-    .triangle {
-      position: absolute;
-      right: 0;
-      background: $color-grey;
-      height: 1.2rem;
-      min-width: 0.8rem;
-      clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
-      border: none;
-      transform: translateX(7%);
-    }
-  }
-
-  &__menu {
-    background: linear-gradient(
-      to top right,
-      $primary-color-light,
-      $primary-color
-    );
-    height: 100%;
-    padding: 2rem;
-  }
-
-  &__client {
-    display: flex;
-    //   justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 0.8rem;
-      margin-right: 1.5rem;
-    }
-
-    p {
+   &__logo {
+      background: darken($primary-color-dark, 1);
       color: $white;
-      font-size: 1.3rem;
+      padding: 1.5rem 4rem;
 
-      &::after {
-        content: 'Market Hero';
-        display: block;
-        margin-top: 0.5rem;
-        color: rgba($color-grey, 0.4);
-        font-size: 1.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+         width: 3rem;
       }
-    }
-  }
 
-  &__options {
-    margin-top: 1.5rem;
-  }
+      h1 {
+         text-transform: uppercase;
+         text-align: center;
+         flex: 1 0 100%;
+         font-size: 1.5rem;
+         letter-spacing: 0.2rem;
+      }
 
-  &__list {
-    list-style: none;
-  }
+      .triangle {
+         position: absolute;
+         right: 0;
+         background: $color-grey;
+         height: 1.2rem;
+         min-width: 0.8rem;
+         clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
+         border: none;
+         transform: translateX(7%);
+      }
+   }
 
-  &__link {
-    color: rgba($color-grey, 0.4);
-    text-decoration: none;
-    display: block;
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
+   &__menu {
+      background: linear-gradient(
+         to top right,
+         $secondary-color,
+         $primary-color
+      );
+      height: 100%;
+      padding: 2rem;
+   }
 
-    &::before {
-      content: '';
-      display: inline-block;
-      // background: $white;
-      width: 4rem;
-      height: 2rem;
-    }
+   &__client {
+      display: flex;
+      //   justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+      img {
+         width: 4rem;
+         height: 4rem;
+         border-radius: 0.8rem;
+         margin-right: 1.5rem;
+      }
 
-    &:hover {
+      p {
+         color: $white;
+         font-size: 1.3rem;
+
+         &::after {
+            content: 'Market Hero';
+            display: block;
+            margin-top: 0.5rem;
+            color: rgba($color-grey, 0.4);
+            font-size: 1.1rem;
+         }
+      }
+   }
+
+   &__options {
+      margin-top: 1.5rem;
+   }
+
+   &__list {
+      list-style: none;
+   }
+
+   &__link {
+      color: rgba($color-grey, 0.4);
+      text-decoration: none;
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+
+      &::before {
+         content: '';
+         display: inline-block;
+         // background: $white;
+         width: 4rem;
+         height: 2rem;
+      }
+
+      &:hover {
+         color: $white;
+      }
+   }
+
+   .active {
       color: $white;
-    }
-  }
-
-  .active {
-    color: $white;
-  }
+   }
 }

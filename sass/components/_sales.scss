@@ -1,0 +1,12 @@
+.sales {
+   @include title;
+
+   &__graph {
+      padding: 2.5rem;
+      border-bottom: 1px solid $color-grey;
+   }
+   &__canvas {
+      width: 100%;
+      // max-height: 23rem;
+   }
+}
