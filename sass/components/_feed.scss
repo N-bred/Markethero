@@ -5,23 +5,67 @@
     justify-content: space-around;
     align-items: center;
     padding: 3rem;
+    @media only screen and (max-width: $small) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     max-width: 23rem;
+    @media only screen and (max-width: $small) {
+      max-width: 40rem;
+      min-width: 40rem;
+      text-align: center;
+      margin: 1.5rem 0;
+      box-shadow: 0 2rem 3rem rgba($color-grey, 0.4);
+      border-radius: 3px;
+      padding: 2rem;
+    }
+
+    &:last-child {
+      @media only screen and (max-width: $medium) {
+        align-self: flex-start;
+      }
+
+      @media only screen and (max-width: $small) {
+        align-self: center;
+      }
+    }
   }
 
   &__title {
     font-size: 1.8rem;
     font-weight: normal;
+    @media only screen and (max-width: $medium) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $small) {
+      margin-bottom: 1.5rem;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 4rem;
+    }
 
     span {
       color: $color-grey-dark;
       font-size: 1.3rem;
+      @media only screen and (max-width: $medium) {
+        font-size: 1.8rem;
+        display: block;
+      }
+      @media only screen and (max-width: $xsmall) {
+        font-size: 2.8rem;
+      }
     }
   }
 
   &__text {
     font-size: 1.3rem;
+    @media only screen and (max-width: $medium) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 2.8rem;
+    }
   }
 }

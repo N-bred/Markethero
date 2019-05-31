@@ -1,29 +1,46 @@
 @mixin bars($color, $height) {
-   content: '';
-   display: block;
-   background: $color;
-   position: absolute;
-   border-radius: 5px;
-   width: 100%;
-   bottom: 0;
-   height: $height;
+  content: '';
+  display: block;
+  background: $color;
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  bottom: 0;
+  height: $height;
 }
 
 @mixin title {
-   &__title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2.5rem;
-      h3 {
-         font-size: 1.8rem;
-         font-weight: normal;
-      }
-   }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    @media only screen and (max-width: $small) {
+      flex-direction: column;
+    }
 
-   &__select {
-      border: 1px solid $color-grey;
-      padding: 0.5rem 0.75rem;
-      border-radius: 3px;
-   }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: normal;
+      @media only screen and (max-width: $medium) {
+        font-size: 2.4rem;
+      }
+      @media only screen and (max-width: $xsmall) {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  &__select {
+    border: 1px solid $color-grey;
+    padding: 0.5rem 0.75rem;
+    border-radius: 3px;
+    @media only screen and (max-width: $medium) {
+      padding: 1rem 1.25rem;
+    }
+    @media only screen and (max-width: $small) {
+      margin-top: 2.5rem;
+      width: 45rem;
+    }
+  }
 }

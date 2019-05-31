@@ -1,47 +1,78 @@
 html {
-   box-sizing: border-box;
-   font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $medium-2) {
+    font-size: 56.7%;
+  }
+  @media only screen and (max-width: $medium) {
+    font-size: 43.75%;
+  }
+  @media only screen and (max-width: $small) {
+    font-size: 37.5%;
+  }
+  @media only screen and (max-width: $xsmall) {
+    font-size: 25%;
+  }
 }
 *,
 *::before,
 *::after {
-   margin: 0;
-   padding: 0;
-   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
-   background: $color-grey;
+  font-family: 'Roboto', sans-serif;
+  background: $color-grey;
 }
 
 .big-container {
-   display: flex;
-   width: 120rem;
-   margin: 5rem auto;
-   background: $white;
-   border-radius: 0.4rem;
-   box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
-   overflow: hidden;
+  display: flex;
+  max-width: 120rem;
+  width: 100%;
+  margin: 5rem auto;
+  background: $white;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+  overflow: hidden;
+
+  @media only screen and (max-width: $medium-2) {
+    margin: 0;
+  }
 }
 
 .col-1 {
-   flex: 1 0 20%;
-   transition: margin 0.3s ease-in-out;
-   transform-origin: right;
+  flex: 1 0 20%;
+  transition: margin 0.3s ease-in-out;
+  transform-origin: right;
+  @media only screen and (max-width: $medium-2) {
+    margin-left: -40%;
+  }
 }
 
 .col-2 {
-   flex: 1 0 80%;
+  flex: 1 0 80%;
 }
 
 .main {
-   display: flex;
+  display: flex;
+  @media only screen and (max-width: $medium) {
+    flex-wrap: wrap;
+  }
 }
 
 .main__col--1 {
-   flex: 1 0 70%;
+  flex: 1 0 70%;
+
+  @media only screen and (max-width: $medium) {
+    flex: 1 0 100%;
+  }
 }
 .main__col--2 {
-   flex: 1 0 30%;
+  flex: 1 0 30%;
+  @media only screen and (max-width: $medium) {
+    flex: 1 0 100%;
+  }
 }

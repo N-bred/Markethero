@@ -1,63 +1,94 @@
 .adds {
-   padding: 2.5rem;
-   border-bottom: 1px solid $color-grey;
+  padding: 2.5rem;
+  border-bottom: 1px solid $color-grey;
 
-   &__space {
-      background: linear-gradient(
-         to right top,
-         $primary-color-light,
-         $primary-color-dark
-      );
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 2.5rem;
-      border-radius: 4px;
-   }
+  &__space {
+    background: linear-gradient(
+      to right top,
+      $primary-color-light,
+      $primary-color-dark
+    );
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem;
+    border-radius: 4px;
+    @media only screen and (max-width: $small) {
+      flex-direction: column;
+    }
+  }
 
-   &__text {
-      color: $color-grey-3;
-      font-size: 1.8rem;
-      font-weight: lighter;
-      letter-spacing: 0.1rem;
+  &__text {
+    color: $color-grey-3;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    @media only screen and (max-width: $small) {
+      font-size: 2.3rem;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 3rem;
+      text-align: center;
+    }
 
-      &--yellow {
-         color: $color-yellow;
-         font-weight: bold;
-      }
-
-      &--white {
-         color: $white;
-         font-weight: bold;
-      }
-   }
-
-   &__offer {
-      text-transform: uppercase;
-      color: $white;
-      font-size: 1.3rem;
+    &--yellow {
+      color: $color-yellow;
       font-weight: bold;
-   }
+    }
 
-   &__button {
-      justify-self: flex-end;
-   }
+    &--white {
+      color: $white;
+      font-weight: bold;
+    }
+  }
 
-   &__link {
-      &:link,
-      &:visited {
-         color: $primary-color;
-         padding: 1.5rem 2.5rem;
-         background: $color-yellow;
-         border-radius: 4px;
-         text-decoration: none;
-         text-transform: uppercase;
-         font-size: 1.4rem;
-         transition: background 0.3s;
+  &__offer {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    @media only screen and (max-width: $small) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 2.6rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__button {
+    justify-self: flex-end;
+    @media only screen and (max-width: $small) {
+      width: 90%;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $primary-color;
+      padding: 1.5rem 2.5rem;
+      background: $color-yellow;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      transition: background 0.3s;
+      @media only screen and (max-width: $small) {
+        margin-top: 2.5rem;
+        font-size: 1.8rem;
+        display: block;
+        text-align: center;
       }
-
-      &:hover {
-         background: rgba($color-yellow, 0.9);
+      @media only screen and (max-width: $xsmall) {
+        font-size: 3rem;
       }
-   }
+    }
+
+    &:hover {
+      background: rgba($color-yellow, 0.9);
+    }
+  }
 }

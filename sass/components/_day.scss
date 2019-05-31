@@ -1,147 +1,217 @@
 .main__day {
-   background: $color-grey-2;
-   border: 1px solid $color-grey;
-   border-right: none;
-   border-left: 2px solid $color-grey;
-   padding: 2.5rem;
-   height: 100%;
+  background: $color-grey-2;
+  border: 1px solid $color-grey;
+  border-right: none;
+  border-left: 2px solid $color-grey;
+  padding: 2.5rem;
+  height: 100%;
 }
 
 .day {
-   &__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-   &__links {
-      position: relative;
-      flex: 1 0 20%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      a {
-         //  position: absolute;
-         &:link,
-         &:visited {
-            font-size: 1.6rem;
-            text-decoration: none;
-            color: $color-grey-dark-2;
-         }
-
-         &:hover {
-            color: $color-purple;
-         }
-      }
-      .right {
-         transform: rotate(180deg) translateY(-0.2rem);
-      }
-   }
-
-   &__title {
-      font-size: 1.8rem;
-      font-weight: normal;
-      flex: 1 0 80%;
-   }
-
-   &__sales {
-      margin: 5rem auto;
-   }
-
-   &__stats {
-      background: $white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      width: 11rem;
-      height: 11rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    @media only screen and (max-width: $medium) {
       flex-wrap: wrap;
+    }
+  }
 
-      h2 {
-         flex: 1 0 100%;
-         font-size: 3rem;
-         font-weight: normal;
-         text-align: center;
+  &__links {
+    position: relative;
+    flex: 1 0 20%;
+    @media only screen and (max-width: $medium) {
+      flex: 1 0 100%;
+      margin-top: 2.5rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      //  position: absolute;
+      &:link,
+      &:visited {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: $color-grey-dark-2;
+
+        @media only screen and (max-width: $medium) {
+          font-size: 4.5rem;
+        }
       }
 
-      p {
-         flex: 1 0 100%;
-         text-align: center;
-         font-size: 1.2rem;
-         color: rgba($color-black, 0.5);
-         max-width: 5rem;
-         align-self: start;
+      &:hover {
+        color: $color-purple;
       }
-   }
+    }
+    .right {
+      transform: rotate(180deg) translateY(-0.2rem);
+    }
+  }
 
-   &__options {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      padding: 0 2.5rem;
-      grid-gap: 3rem;
-   }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: normal;
+    flex: 1 0 80%;
+    @media only screen and (max-width: $medium) {
+      flex: 1 0 100%;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 4rem;
+    }
+  }
+
+  &__sales {
+    margin: 5rem auto;
+  }
+
+  &__stats {
+    background: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 11rem;
+    height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media only screen and (max-width: $medium) {
+      width: 17rem;
+      height: 17rem;
+    }
+
+    h2 {
+      flex: 1 0 100%;
+      font-size: 3rem;
+      font-weight: normal;
+      text-align: center;
+      @media only screen and (max-width: $medium) {
+        font-size: 4rem;
+      }
+      @media only screen and (max-width: $xsmall) {
+        font-size: 6.5rem;
+      }
+    }
+
+    p {
+      flex: 1 0 100%;
+      text-align: center;
+      font-size: 1.2rem;
+      color: rgba($color-black, 0.5);
+      max-width: 5rem;
+      align-self: start;
+      @media only screen and (max-width: $medium) {
+        font-size: 2rem;
+        max-width: 10rem;
+      }
+      @media only screen and (max-width: $xsmall) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2.5rem;
+    grid-gap: 3rem;
+  }
 }
 
 .sales {
-   display: flex;
-   &__border {
-      border-radius: 50%;
+  display: flex;
+  &__border {
+    border-radius: 50%;
 
-      &--green {
-         border: 5px solid $color-grey-2;
-         border-right: 5px solid $color-green;
-         width: 20rem;
-         height: 20rem;
-         margin: 0 auto;
-         transform: rotate(-45deg);
-         position: relative;
+    &--green {
+      border: 5px solid $color-grey-2;
+      border-right: 5px solid $color-green;
+      width: 20rem;
+      height: 20rem;
+      margin: 0 auto;
+      transform: rotate(-45deg);
+      position: relative;
+      @media only screen and (max-width: $medium) {
+        width: 30rem;
+        height: 30rem;
       }
-      &--blue {
-         border: 5px solid $color-grey-2;
-         border-right: 5px solid $color-blue;
-         border-top: 5px solid $color-blue;
-         width: 17.5rem;
-         height: 17.5rem;
-         margin: 0 auto;
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%) rotate(90deg);
+    }
+    &--blue {
+      border: 5px solid $color-grey-2;
+      border-right: 5px solid $color-blue;
+      border-top: 5px solid $color-blue;
+      width: 17.5rem;
+      height: 17.5rem;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      @media only screen and (max-width: $medium) {
+        width: 25rem;
+        height: 25rem;
       }
-      &--purple {
-         border: 5px solid $color-purple;
-         width: 15rem;
-         height: 15rem;
-         margin: 0 auto;
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &--purple {
+      border: 5px solid $color-purple;
+      width: 15rem;
+      height: 15rem;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      @media only screen and (max-width: $medium) {
+        width: 21rem;
+        height: 21rem;
       }
-   }
+    }
+  }
 }
 
 .options {
-   &__item {
-   }
+  &__item {
+    @media only screen and (max-width: $medium) {
+      text-align: center;
+    }
+  }
 
-   &__title {
-      color: rgba($color-black, 0.6);
-      font-size: 1.4rem;
-   }
-
-   &__text {
+  &__title {
+    color: rgba($color-black, 0.6);
+    font-size: 1.4rem;
+    @media only screen and (max-width: $medium) {
       font-size: 2rem;
-      font-weight: normal;
-   }
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 3rem;
+    }
+  }
 
-   &__number {
-      color: $color-green;
-      font-size: 1.4rem;
-   }
+  &__text {
+    font-size: 2rem;
+    font-weight: normal;
+    @media only screen and (max-width: $medium) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 4rem;
+    }
+  }
+
+  &__number {
+    color: $color-green;
+    font-size: 1.4rem;
+    @media only screen and (max-width: $medium) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $xsmall) {
+      font-size: 3rem;
+    }
+  }
 }
