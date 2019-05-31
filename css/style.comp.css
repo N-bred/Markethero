@@ -80,6 +80,7 @@ body {
     background: #451d7b;
     color: #fff;
     padding: 1.5rem 4rem;
+    min-height: 46px;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -192,6 +193,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 25em) {
+      .header .container {
+        margin-top: 0.5rem; } }
   .header__menu-button {
     display: inline-block;
     margin-left: 2rem;
@@ -210,6 +214,10 @@ body {
       @media only screen and (max-width: 49.1em) {
         .header__menu-button--bars {
           width: 2rem; } }
+      @media only screen and (max-width: 25em) {
+        .header__menu-button--bars {
+          height: 0.5rem;
+          width: 3rem; } }
       .header__menu-button--bars::before, .header__menu-button--bars::after {
         content: '';
         display: block;
@@ -220,10 +228,14 @@ body {
         @media only screen and (max-width: 49.1em) {
           .header__menu-button--bars::before, .header__menu-button--bars::after {
             width: 2.5rem; } }
+        @media only screen and (max-width: 25em) {
+          .header__menu-button--bars::before, .header__menu-button--bars::after {
+            height: 0.5rem;
+            width: 3.5rem; } }
       .header__menu-button--bars::before {
-        transform: translateY(-0.5rem); }
+        transform: translateY(-1rem); }
       .header__menu-button--bars::after {
-        transform: translateY(0.5rem); }
+        transform: translateY(1rem); }
   .header__options {
     margin-left: auto;
     flex: 1 0 80%; }
@@ -264,9 +276,14 @@ body {
         min-width: 40rem;
         text-align: center;
         margin: 1.5rem 0;
-        box-shadow: 0 2rem 3rem rgba(238, 238, 238, 0.4);
+        box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
         border-radius: 3px;
-        padding: 2rem; } }
+        padding: 2rem;
+        border: 2px solid #59259f; } }
+    @media only screen and (max-width: 25em) {
+      .feed__item {
+        max-width: 45rem;
+        min-width: 45rem; } }
     @media only screen and (max-width: 49.1em) {
       .feed__item:last-child {
         align-self: flex-start; } }
@@ -284,7 +301,7 @@ body {
         margin-bottom: 1.5rem; } }
     @media only screen and (max-width: 25em) {
       .feed__title {
-        font-size: 4rem; } }
+        font-size: 4.5rem; } }
     .feed__title span {
       color: #ccc;
       font-size: 1.3rem; }
@@ -294,7 +311,7 @@ body {
           display: block; } }
       @media only screen and (max-width: 25em) {
         .feed__title span {
-          font-size: 2.8rem; } }
+          font-size: 3.5rem; } }
   .feed__text {
     font-size: 1.3rem; }
     @media only screen and (max-width: 49.1em) {
@@ -302,7 +319,7 @@ body {
         font-size: 1.8rem; } }
     @media only screen and (max-width: 25em) {
       .feed__text {
-        font-size: 2.8rem; } }
+        font-size: 3.2rem; } }
 
 .emails__title {
   display: flex;
@@ -320,7 +337,7 @@ body {
         font-size: 2.4rem; } }
     @media only screen and (max-width: 25em) {
       .emails__title h3 {
-        font-size: 3.2rem; } }
+        font-size: 3.8rem; } }
 
 .emails__select {
   border: 1px solid #eee;
@@ -333,6 +350,9 @@ body {
     .emails__select {
       margin-top: 2.5rem;
       width: 45rem; } }
+  @media only screen and (max-width: 25em) {
+    .emails__select {
+      width: 50rem; } }
 
 .emails__stats {
   border-bottom: 1px solid #eee;
@@ -352,6 +372,9 @@ body {
       grid-template-columns: 45rem;
       justify-content: center;
       grid-row-gap: 2.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .emails__stats {
+      grid-template-columns: 50rem; } }
 
 .email__item {
   background: #f6f5fa;
@@ -472,7 +495,7 @@ body {
         font-size: 2.4rem; } }
     @media only screen and (max-width: 25em) {
       .sales__title h3 {
-        font-size: 3.2rem; } }
+        font-size: 3.8rem; } }
 
 .sales__select {
   border: 1px solid #eee;
@@ -485,6 +508,9 @@ body {
     .sales__select {
       margin-top: 2.5rem;
       width: 45rem; } }
+  @media only screen and (max-width: 25em) {
+    .sales__select {
+      width: 50rem; } }
 
 .sales__graph {
   padding: 2.5rem;
@@ -526,6 +552,9 @@ body {
     @media only screen and (max-width: 49.1em) {
       .day__links a:link, .day__links a:visited {
         font-size: 4.5rem; } }
+    @media only screen and (max-width: 25em) {
+      .day__links a:link, .day__links a:visited {
+        font-size: 6rem; } }
   .day__links a:hover {
     color: #b498f4; }
   .day__links .right {
@@ -542,7 +571,7 @@ body {
       font-size: 2.5rem; } }
   @media only screen and (max-width: 25em) {
     .day__title {
-      font-size: 4rem; } }
+      font-size: 4.5rem; } }
 
 .day__sales {
   margin: 5rem auto; }
@@ -564,6 +593,10 @@ body {
     .day__stats {
       width: 17rem;
       height: 17rem; } }
+  @media only screen and (max-width: 25em) {
+    .day__stats {
+      width: 20rem;
+      height: 20rem; } }
   .day__stats h2 {
     flex: 1 0 100%;
     font-size: 3rem;
@@ -612,6 +645,10 @@ body {
         .sales__border--green {
           width: 30rem;
           height: 30rem; } }
+      @media only screen and (max-width: 25em) {
+        .sales__border--green {
+          width: 35rem;
+          height: 35rem; } }
     .sales__border--blue {
       border: 5px solid #f6f5fa;
       border-right: 5px solid #48d2e9;
@@ -627,6 +664,10 @@ body {
         .sales__border--blue {
           width: 25rem;
           height: 25rem; } }
+      @media only screen and (max-width: 25em) {
+        .sales__border--blue {
+          width: 30rem;
+          height: 30rem; } }
     .sales__border--purple {
       border: 5px solid #b498f4;
       width: 15rem;
@@ -640,6 +681,10 @@ body {
         .sales__border--purple {
           width: 21rem;
           height: 21rem; } }
+      @media only screen and (max-width: 25em) {
+        .sales__border--purple {
+          width: 26rem;
+          height: 26rem; } }
 
 @media only screen and (max-width: 49.1em) {
   .options__item {
